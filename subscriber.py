@@ -13,7 +13,7 @@ def on_message(client, userdata, message):
     data = json.loads(payload)
     print_data2(data)
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 client.on_message = on_message
 client.connect('localhost',1883)
 
