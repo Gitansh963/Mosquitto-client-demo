@@ -24,7 +24,7 @@ class App(tk.Tk):
         self.count = []
         self.templist = []
         self.time = []
-        self.client = mqtt.Client()
+        self.client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
         self.client.on_message = self.on_message
         self.client.connect(broker_address, 1883)
         self.client.subscribe(topic)
