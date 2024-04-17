@@ -10,7 +10,7 @@ from util import create_data
 topic= "Util Dictionary"
 
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 
 client.connect('localhost',1883)
 
